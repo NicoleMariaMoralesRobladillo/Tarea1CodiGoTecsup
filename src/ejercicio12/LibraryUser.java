@@ -34,6 +34,9 @@ public class LibraryUser {
     public void setItemsPrestados(List<LibraryItem> itemsPrestados) {
         this.itemsPrestados = itemsPrestados;
     }
+    public void deleteItemsPrestados() {
+        itemsPrestados.clear();
+    }
     public void addItemPrestado(LibraryItem libraryItem) {
         itemsPrestados.add(libraryItem);
     }
@@ -42,7 +45,14 @@ public class LibraryUser {
     }
     public String mostrarInformacion() {
         return "Nombre: " + nombre
-                + "\nID: " + id
-                + "\nItems prestados: \n" + itemsPrestados.toString();
+                + "\nID: " + id;
+    }
+    public void mostrarInformacionCompleta() {
+        System.out.println(
+                "Nombre: " + nombre +
+                        "\nID: " + id +
+                        "\nItems prestados: [");
+        itemsPrestados.forEach((item -> System.out.println("- " + item.mostrarInformacion())));
+        System.out.println("]");
     }
 }

@@ -3,8 +3,8 @@ package ejercicio12;
 public class DVD extends LibraryItem {
     private String director;
     private double duracion;
-    public DVD(String titulo, String id, boolean estaPrestado, String director, double duracion) {
-        super(titulo, id, estaPrestado);
+    public DVD(String titulo, boolean estaPrestado, String director, double duracion) {
+        super(titulo, estaPrestado);
         this.director = director;
         this.duracion = duracion;
     }

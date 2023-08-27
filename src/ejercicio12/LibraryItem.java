@@ -4,9 +4,8 @@ public abstract class LibraryItem {
     private String titulo;
     private String id;
     private boolean estaPrestado;
-    protected LibraryItem(String titulo, String id, boolean estaPrestado) {
+    protected LibraryItem(String titulo, boolean estaPrestado) {
         this.titulo = titulo;
-        this.id = id;
         this.estaPrestado = estaPrestado;
     }
     public String getTitulo() {

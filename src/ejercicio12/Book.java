@@ -2,8 +2,8 @@ package ejercicio12;
 
 public class Book extends LibraryItem {
     private String autor;
-    public Book(String titulo, String id, boolean estaPrestado, String autor) {
-        super(titulo, id, estaPrestado);
+    public Book(String titulo, boolean estaPrestado, String autor) {
+        super(titulo, estaPrestado);
         this.autor = autor;
     }
     public String getAutor() {
